@@ -11,6 +11,8 @@ public class Author {
     private String first_name;
     private String last_name;
 
+    public Author() {
+    }
 
     public Author(String first_name, String last_name) {
         this.first_name = first_name;

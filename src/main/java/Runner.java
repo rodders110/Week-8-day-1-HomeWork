@@ -14,6 +14,7 @@ public class Runner {
         Book book2 = new Book("Famous Five", "Children", "Enid Blyton");
         DBBook.saveOrUpdate(book2);
         Book book3 = new Book("The Owl Service", "Teen", "Alan Bennett");
+        DBBook.saveOrUpdate(book3);
 
 
         Author author1 = new Author("Roald", "Dahl");
@@ -26,8 +27,8 @@ public class Runner {
         Book theTwits = DBBook.find(book1.getId());
         Author roaldDahl = DBAuthor.find(author1.getId());
 
-        DBBook.delete(book1);
-        DBAuthor.delete(author1);
+//        DBBook.delete(book1);
+//        DBAuthor.delete(author1);
 
         List<Book> listOfBooks = DBBook.getAll();
         List<Author> listOfAuthor = DBAuthor.getAll();
