@@ -3,6 +3,8 @@ import db.DBBook;
 import models.Author;
 import models.Book;
 
+import java.util.List;
+
 public class Runner {
 
 
@@ -20,6 +22,20 @@ public class Runner {
         DBAuthor.saveOrUpdate(author2);
         Author author3 = new Author("Alan", "Bennett");
         DBAuthor.saveOrUpdate(author3);
+
+        Book theTwits = DBBook.find(book1.getId());
+        Author roaldDahl = DBAuthor.find(author1.getId());
+
+        DBBook.delete(book1);
+        DBAuthor.delete(author1);
+
+        List<Book> listOfBooks = DBBook.getAll();
+        List<Author> listOfAuthor = DBAuthor.getAll();
+
+        DBBook.deleteAll();
+
+        List<Book> listOfBooks2 = DBBook.getAll();
+
     }
 
 
